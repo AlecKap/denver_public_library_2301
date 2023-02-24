@@ -21,7 +21,6 @@ RSpec.describe Library do
 
     it '#books' do
       expect(@library_1.books).to eq([])
-      # expect(@library_1.books.first).to be_a(Book)
     end
 
     it '#authors' do
