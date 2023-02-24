@@ -13,7 +13,11 @@ class Book
   end
 
   def publication_year
-    date_array = @publication_date.split(" ")
-    date_array[2]
+    if @publication_date.length > 4
+      date_array = @publication_date.split(" ")
+      date_array[2]
+    else
+      @publication_date
+    end
   end
 end
