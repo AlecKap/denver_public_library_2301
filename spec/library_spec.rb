@@ -32,9 +32,16 @@ RSpec.describe Library do
     it '#add_author(author)' do
       @library_1.add_author(@charlotte_bronte)
       @library_1.add_author(@alec_kapicak)
+
       expect(@library_1.authors.first).to be_a(Author)
       expect(@library_1.authors).to eq([@charlotte_bronte, @alec_kapicak])
       
+    end
+
+    it "adds authors book to books" do
+      @library_1.add_author(@charlotte_bronte)
+      @library_1.add_author(@alec_kapicak)
+      expect(@library_1.books).to eq([@jane_eyre, @villette, @book_1 ])
     end
   end
 
